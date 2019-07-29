@@ -6,11 +6,11 @@ app = Flask(__name__)
 
 cors = CORS(app, resource={r"/*":{"origins": "*"}})
 
-@app.route("/home",methods=['GET'])
+@app.route("/home")
 def home():
     return render_template("home.html")
     
-@app.route("/about",methods=['GET'])
+@app.route("/about")
 def about():
     return render_template("about.html")
 
