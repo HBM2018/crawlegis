@@ -6,6 +6,14 @@ app = Flask(__name__)
 
 cors = CORS(app, resource={r"/*":{"origins": "*"}})
 
+@app.route("/home",methods=['GET'])
+def home():
+    return render_template("home.html")
+    
+@app.route("/about",methods=['GET'])
+def about():
+    return render_template("about.html")
+
 @app.route("/", methods=['GET'])
 def index():
     return "<h1>Hello World!</h1>"
